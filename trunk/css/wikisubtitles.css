@@ -1,0 +1,102 @@
+@charset "utf-8";
+/* CSS Document */
+
+body {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	margin: 0px;
+}
+.NewsTitle {
+	font-weight: bold;
+	background-color: #99FFCC;
+}
+.SectionTitle {
+	font-weight: bold;
+}
+.newsDate {
+	color: #666666;
+}
+a.gris:link {color: #666666; text-decoration: none;}
+a.gris:active {color: #666666; text-decoration:underline}
+a.gris:visited {color: #666666; text-decoration: none;}
+a.gris:hover {color: #666666; text-decoration:underline}
+
+.headerText {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 12px;
+}
+.coolBoton {
+	font-weight: bold;
+	background-color: #FFCC99;
+	border-top-width: 2px;
+	border-right-width: 2px;
+	border-bottom-width: 2px;
+	border-left-width: 2px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+}
+.versales {
+	font-variant: small-caps;
+	font-size: 11px;
+}
+.titulo {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	color: #FF6633;
+	font-weight: bold;
+}
+.version {
+	font-size: 14px;
+	font-variant: small-caps;
+	color: #0000FF;
+}
+.idioma {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	color: #FF0000;
+}
+.inputCool {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	background-color: #CCFFCC;
+}
+.originalText {
+	font-size: 10px;
+	line-height: 10pt;
+	background-color: #FFCCFF;
+}
+.quotedText {
+	font-size: 10px;
+	line-height: 10pt;
+	background-color: #E5E5E5;
+}
+.lockedText {
+	font-size: 10px;
+	line-height: 10pt;
+	background-color: red;
+}
+.cursorEdit {
+	cursor: pointer;
+}
+
+.invisible{
+	visibility: hidden;
+}
+img {
+	vertical-align:text-bottom
+}
+.language {
+	font-family: Arial, Helvetica, sans-serif;
+	font-variant: small-caps;
+	font-size: 14px;
+	font-weight: 700;
+	color: #CC33CC;
+	background-color: #CCCCFF;
+}
+.newsClaro {
+	font-weight: bold;
+	background-color: #CCFFFF;
+}
