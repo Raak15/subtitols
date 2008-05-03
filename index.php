@@ -1,11 +1,16 @@
 <?php include_once('includes/includes.php'); ?>
+<?
+setlocale(LC_ALL, 'es-ES');
+bindtextdomain('messages', './locales/');
+textdomain('messages');
+?>	
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
 	"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 <head>
-	<title>Subtítols – Your favourite TV Show, movies subtitles made by the people</title>
+	<title>Subtítols – Your favourite TV Show, movies subtitles made by the people <?= _("hello") ?></title>
 	<meta http-equiv="Content-Type" content="application/xhtml+xml; charset=utf-8" />
 	<script type="text/javascript" src="js/mootools.v1.11.js"></script>
 	<script type="text/javascript">
@@ -17,7 +22,7 @@
 </head>
 
 <body>
-	
+
 <?php include("includes/general/moderator_bar.php"); ?>
 
 <?php include("header.php"); ?>
