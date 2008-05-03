@@ -1,0 +1,9 @@
+Wikisubtitles's code.
+Installation instructions
+=========================
+1) Create a database on your MySQL server, with all priviligies.
+2) Load the file 'install/install.sql' on that database.
+3) Edit the config.php file and write the database configuration information and script path
+4) Log in as "admin", password "wikisubtitles"
+
+Smalleye.
