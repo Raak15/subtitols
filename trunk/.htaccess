@@ -1,0 +1,23 @@
+<Files php.ini>
+	Order allow,deny
+	Deny from all
+</Files>
+
+AddType text/srt srt
+
+#Rewrite engine
+#Options +FollowSymlinks
+
+RewriteEngine on
+
+#Rewrite rules
+RewriteRule ^sub/(.*)$ showsub.php?id=$1
+RewriteRule ^original/(.+)/(.+) downloadoriginal.php?id=$1&fversion=$2
+RewriteRule ^show/(.+) viewshow.php?showid=$1
+RewriteRule ^season/(.+)/(.+) viewshow.php?showid=$1&season=$2
+RewriteRule ^user/(.+) showuser.php?userid=$1
+RewriteRule ^updated/(.+)/(.+)/(.+) downloadupdated.php?id=$2&lang=$1&fversion=$3
+RewriteRule ^serie/(.+)/(.+)/(.+)/(.+) showsub.php?ushow=$1&useason=$2&uepisode=$3
+RewriteRule ^film/(.+) showsub.php?ufilm=$1
+RewriteRule ^wikifaq/$ w/index.php [L,QSA]
+RewriteRule ^wikifaq/([^\/]+)$ w/index.php?title=$1 [L,QSA]
