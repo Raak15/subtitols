@@ -1,7 +1,7 @@
 <?php include_once('includes/includes.php'); ?>
 <?
-setlocale(LC_ALL, 'es-ES');
-bindtextdomain('messages', './locales/');
+setlocale(LC_ALL, 'es_ES');
+bindtextdomain('messages', './locale/');
 textdomain('messages');
 ?>	
 
