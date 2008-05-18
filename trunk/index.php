@@ -1,4 +1,5 @@
 <?php include_once('includes/includes.php'); ?>
+
 <?
 setlocale(LC_ALL, 'es_ES');
 bindtextdomain('messages', './locale/');
@@ -10,7 +11,7 @@ textdomain('messages');
 
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 <head>
-	<title>Subtítols – Your favourite TV Show, movies subtitles made by the people <?= _("hello") ?></title>
+	<title>Subtítols – <?= _("Your favourite TV Show, movies subtitles made by the people") ?></title>
 	<meta http-equiv="Content-Type" content="application/xhtml+xml; charset=utf-8" />
 	<script type="text/javascript" src="js/mootools.v1.11.js"></script>
 	<script type="text/javascript">
@@ -64,7 +65,7 @@ textdomain('messages');
 <!-- empieza el content -->
 
 <table class="table-universal">
-	<caption><?php echo $wikilang_last_uploaded_episodes; ?></caption>
+	<caption><?= _("Last uploaded episodes"); ?></caption>
 	<tbody>
 		<?php
 
@@ -127,7 +128,7 @@ textdomain('messages');
 <div class="list-footer"></div>
 
 <table class="table-universal">
-	<caption><?php echo $wikilang_last_uplodaded_movies; ?></caption>
+	<caption><?= _("Last uploaded movies"); ?></caption>
 	<tbody>
 		<?php
 		$lastcompleted_query = "select subID,author,title from files where finished=1 and is_episode=0 and temp=0 order by end_date DESC limit $MAX_CATEGORY";
@@ -188,7 +189,7 @@ textdomain('messages');
 <div class="list-footer"></div>
 
 <table class="table-universal">
-	<caption><?php echo $wikilang_last_translated;?></caption>
+	<caption><?= _("Latest translated"); ?></caption>
 	<tbody>
 		<?php
 			$lastedited_query="select subID,lang_id from lasttranslated order by date  DESC limit $MAX_CATEGORY";
@@ -245,7 +246,7 @@ textdomain('messages');
 	</div>
 				
 	<table class="table-universal">
-		<caption><?php echo $wikilang_last_fversion;?></caption>
+		<caption><?= _("Latest uploaded episodes"); ?></caption>
 		<tbody>
 		<?php
 			$lastversion_query="select subID,versionDesc,author from fversions where fversion>0 order by entryID DESC limit $MAX_CATEGORY";
@@ -306,7 +307,7 @@ textdomain('messages');
 	
 	
 	<table class="table-universal">
-		<caption><?php echo $wikilang_last_edited; ?></caption>
+		<caption><?= _("Latest edited subtitles"); ?><?php echo $wikilang_last_edited; ?></caption>
 		<tbody>
 
 	<?php
@@ -387,7 +388,7 @@ textdomain('messages');
 	
 	<div id="top-list">
 
-				<h2><?php echo $wikilang_most_today;?></h2>
+				<h2><?= _("Most downloaded subtitles"); ?></h2>
 
 				<table border="0">
 					<?php
@@ -461,7 +462,7 @@ textdomain('messages');
 	<table width="70%" border="1"  align="center">
 	<tr>
 		<td colspan="2" class="NewsTitle">
-		<?php echo $wikilang_site_news; ?>
+			<?php echo $wikilang_site_news; ?>
 		</td>
 	</tr>
 	<?php
