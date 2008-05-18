@@ -1,9 +1,9 @@
 <?php
 	
-	$BBDD_host = 'internal-db.s10123.gridserver.com';
-	$BBDD_database = 'db10123_subtitols';
-	$BBDD_user = 'tomedo';
-	$BBDD_password = 'w0l0l0z0r';
+	$BBDD_host = 'localhost:8889';
+	$BBDD_database = 'wikisubt_subtitulos';
+	$BBDD_user = 'root';
+	$BBDD_password = 'root';
 	
 	$SCRIPT_PATH = ''; //ending with '/'
 ?>

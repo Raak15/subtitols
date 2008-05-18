@@ -31,6 +31,8 @@
 		<h2><?php echo $wikilang_explore_by_show; ?></h2>
 	
 	</div>
+	
+	
 
 	<div id="content-listados">
 	

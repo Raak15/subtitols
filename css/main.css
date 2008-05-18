@@ -1,3 +1,4 @@
+@import url(/css/forms.css);
 body { background: #fff; margin: 0 30px 0px 30px; padding: 0; font-family: "Arial Rounded MT Bold", "Trebuchet MS", Arial, sans-serif; font-size: 65%;  }
 
 div.clear { clear: both; margin: 0; padding: 0; }
@@ -353,6 +354,15 @@ div.register-tips { padding: 20px; background: #777 url(/images/buttons-lightbg-
 
 
 /* custom forms */
+
+
+
+
+div#gentitle { background: #ffc; padding: 10px; margin: 0 0 15px 0; -webkit-border-radius: 7px; font-size: 1.4em; border: 1px solid #FDE999; }
+div#gentitle p { margin: 0; color: #655D3D; }
+div#gentitle p strong { color: #3F3A26; }
+
+
 
 dd.choice { background: #ffc; border: 1px solid #ff9; -webkit-border-radius: .7em; }
 dd.choice label { font-weight: bold; }
