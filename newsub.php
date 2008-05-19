@@ -40,8 +40,7 @@
 	<div id="sub-nav">
 		<ul>
 			<li class="active"><span><?= _("TV Shows"); ?></span></li>
-			<li><a href="/upload-movie.php"><?= _("Movies"); ?></a></li>
-			<li><a href="/upload-screencast.php"><?= _("Screencasts"); ?></a></li>
+			<li><a href="/newmov.php"><?= _("Movies"); ?></a></li>
 		</ul>
 	</div>
 
@@ -119,7 +118,7 @@
 				</div>
 					
 				<div class="grilla1">
-					<label><?= _("Size (in <abbr title=\"Megabytes\">MB</abbr>)"); ?></label>
+					<label><?= _("Size <small>(in <abbr title=\"Megabytes\">MB</abbr>)</small>"); ?></label>
 					<input type="text" class="inputCool" name="fsize" id="fversion" maxlength="10" size="4" />
 				</div>
 
@@ -138,7 +137,7 @@
 				
 				<div class="grilla1">
 					<label><?= _("Comments"); ?></label>
-				 	<textarea name="comment" cols="90" rows="2"></textarea>
+				 	<textarea name="comment" cols="5f0" rows="2"></textarea>
 				</div>
 					
 				<div class="sendbutton">
