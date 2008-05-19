@@ -10,11 +10,14 @@
 	<script type="text/javascript" src="js/mootools.v1.11.js"></script>
 	<script type="text/javascript">
 		<?php include('js/quicksearch.php'); ?>
-		<?php include('js/title_change.php'); ?>
 	</script>
 	<style type="text/css" media="screen">
 		@import url(/css/main.css);
 	</style>
+	
+	<script type="text/javascript" charset="utf-8">
+		<?php include('js/title_change.php'); ?>
+	</script>
 	
 </head>
 
@@ -48,8 +51,8 @@
 			
 			<form action="uploadnewsub.php" method="post" enctype="multipart/form-data" name="step1" id="step1" onsubmit="return check();">
 
-				<div id="gentitle"><?php echo $wikilang_title_on_wikisubtitles; ?></div>
-							
+				<div id="gentitle"></div>
+											
 					<input name="type" type="hidden" value="ep" checked="checked" id="epop" />
 		
 					<div class="grilla1">
@@ -146,112 +149,23 @@
 				
 				</div>
 
-				<hr />
+			</div>
 
-  <table width="90%" border="0" align="center">
-    <tr>
+			<div id="menus">
 
-      <td><input name="type" type="radio" value="ep" checked="checked" id="epop" onclick="moep();"/>
-        <?php echo $wikilang_is_episode; ?> 
-        </td>
-      <td><span id="epzone"><?php echo $wikilang_show; ?> 
-        <select name="showID" id="show" onchange="titlechange();checkEp();">
-        <option id="0"><?php echo $wikilang_select_a_show; ?></option>
-<?php
-	$query = "select * from shows order by title";
-	$result = mysql_query($query);
+				<h1>LOLO</h1>
+
+			</div>
+
+			<div class="clear"></div>
+
+			</div>
+
+			<?php
+				include ('footer.php');
+				bbdd_close();
+			?>
+
+			</body>
+			</html>
 	
-	while ($row=mysql_fetch_assoc($result))
-	{
-		$sID= $row['showID'];
-		$title = stripslashes($row['title']);
-		echo "<option value=\"$sID\">$title</option>";
-		
-	}
-?>
-        </select>
-
-       <?php echo $wikilang_season; ?>      
-      <input name="season" id="season" type="text" size="3" maxlength="2" onkeyup="titlechange();checkEp();"/> 
-     <?php echo $wikilang_episode; ?> 
-      <input name="epnumber" id="epnumber" type="text" size="3" maxlength="2" onkeyup="titlechange();checkEp();"/> <span id="newshow"><a href="javascript:newShow();"><?php echo $wikilang_add_new_show; ?></a>
-      </span><span id="epexistsa"> </span><br />
-      <?php echo $wikilang_episode_title; ?> <input type="text" name="eptitle" id="eptitle" maxlength="200" size="60" onkeyup="titlechange();"/></span></td></tr>
-
-    <tr>
-      <td>&nbsp;</td>
-      <td><input name="type" type="radio" value="movie" id="movieop" onclick="moep();"/>
-        <?php echo $wikilang_is_movie; ?> </td>
-      <td><span id="moviespan"><?php echo $wikilang_title; ?> 
-        <input type="text" name="movietitle" id="movietitle" maxlength="200" size="70" onkeyup="titlechange();"/>
-        <?php echo $wikilang_year; ?>
-        <input type="text" name="year" id="year" onkeyup="titlechange();"/></span></td>
-    </tr>
-    <tr>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
-      <td></td>
-    </tr>
-
-<!-- termina seleccion subtítulo -->
-
-    <tr>
-      <td class="NewsTitle"><img src="images/subtitle.gif" width="22" height="14" /><?php echo $wikilang_language; ?></td>
-      <td colspan="2"><select name="lang" id="lang"> 
-      <option id="0"><?php echo $wikilang_select_a_language; ?></option>
-<?php
-	$query = "select * from languages order by lang_name";
-	$result = mysql_query($query);
-	
-	while ($row=mysql_fetch_assoc($result))
-	{
-		echo '<option value="'.$row[langID].'">'.$row['lang_name'].'</option>';
-	}
-	utf
-?>
-      </select>      </td>
-    </tr>
-    <tr>
-      <td class="NewsTitle"> <img src="images/package.png" width="16" height="16" /> <?php echo $wikilang_srt_file; ?></td>
-      <td colspan="2"><input type="hidden" name="MAX_FILE_SIZE" value="500000"><input type="file" name="file" /></td>
-    </tr>
-    <tr>
-    	<td class="NewsTitle"> <img src="images/folder_page.png" width="16" height="16" /> <?php echo $wikilang_version; ?></td>
-    	<td colspan="2"><?php echo $wikilang_video_version; ?> (DVDRip/XOR/LoL, etc) <input type="text" class="inputCool" name="version" id="version" maxlength="20" size="7" />
-<?php echo $wikilang_size_mbytes; ?> <input type="text" class="inputCool" name="fsize" id="fversion" maxlength="10" size="4" /></td>
-    	
-    </tr>
-    <tr>
-    <td class="NewsTitle"><?php echo $wikilang_charset; ?></td>
-    <td colspan="2">
-    <select name="charset">
-    <option value="d" selected>ISO-8859-1 (<?php echo $wikilang_occidental_char; ?>) (<?php echo $wikilang_default; ?>)</option>
-    <option value="k">kio8-r (Cyrillic)</option>
-    <option value="w">windows-1251 (Cyrillic)</option>
-    <option value="i">iso-8859-5 (Cyrillic)</option>
-    <option value="a">x-cp866 (Cyrillic)</option>
-    <option value="m">x-mac-cyrillic (Cyrillic)</option>
-    <option value="u">UTF-8</option>
-    </select>
-    &nbsp;
-    </td>
-    
-    </tr>
-    <tr>
-      <td class="NewsTitle"><img src="images/user_comment.png" width="16" height="16" /><?php echo $wikilang_comments; ?></td>
-      <td colspan="2"><textarea name="comment" cols="90" rows="2"></textarea></td>
-    </tr>
-    <tr>
-      <td colspan="3"><div align="center">
-        <input name="Submit" type="submit" class="coolBoton" value="<?php echo $wikilang_upload; ?>" />
-      </div></td>
-    </tr>
-  </table>
-</form>
-<br /><br />
-<?php
-	include('footer.php');
-	bbdd_close();
-?>
-</body>
-</html>
