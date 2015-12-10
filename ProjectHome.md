@@ -1,0 +1,1 @@
+Una aplicación que permite a varios usuarios editar y generar archivos .srt.
